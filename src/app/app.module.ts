@@ -24,6 +24,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginWorkerComponent } from './login-worker/login-worker.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -43,7 +44,8 @@ import { SortPipe } from './pipes/sort.pipe';
     LoginComponent,
     LoginWorkerComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    DashboardComponent
 
   ],
   imports: [
