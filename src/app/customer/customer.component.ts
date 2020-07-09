@@ -9,6 +9,8 @@ import { customers } from 'src/app/film/filmModule';
 })
 export class CustomerComponent implements OnInit {
   customers:any[];
+  sortON="";
+  srch="";
 
   constructor(db:AngularFireDatabase) {
     db.list('/customers').valueChanges().subscribe(customers => {

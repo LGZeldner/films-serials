@@ -22,6 +22,8 @@ import { WorkerComponent } from './worker/worker.component';
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { LoginWorkerComponent } from './login-worker/login-worker.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 
@@ -39,7 +41,9 @@ import { LoginWorkerComponent } from './login-worker/login-worker.component';
     WorkerComponent,
     CustomerComponent,
     LoginComponent,
-    LoginWorkerComponent
+    LoginWorkerComponent,
+    FilterPipe,
+    SortPipe
 
   ],
   imports: [
