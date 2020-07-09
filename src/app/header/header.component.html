@@ -1,11 +1,11 @@
 <header>
     <div class="container-fluid">
         <div class="row header ">
-          <div class="col-sm logo text-center "><a [routerLink]="['']">Логотип</a></div><!--<img src="/assets/img/logo.png" alt="Логотип" ></a>-->
+          <div class="col-sm logo text-center "><a [routerLink]="['/main']">Логотип</a></div><!--<img src="/assets/img/logo.png" alt="Логотип" ></a>-->
             <nav class="row">
-            <div class="col  text-center"><a href="#about" >О нас</a></div>
-            <div class="col  text-center"><a href="#films">Фильмы и сериалы</a></div>
-            <div class="col  text-center"><a href="#contacts">Контакты</a></div>
+            <div class="col  text-center"><a href="/main#about" >О нас</a></div>
+            <div class="col  text-center"><a href="/main#films">Фильмы и сериалы</a></div>
+            <div class="col  text-center"><a href="/main#contacts">Контакты</a></div>
             </nav>
             <div class="col  contact text-center ">
                 <button type="button" class="btn mt-3" data-toggle="modal" data-target="#myModal">
@@ -35,7 +35,7 @@
         <div class="modal-body m-3 mt-5">
           <div class="row text-center">
               <div class="col">
-                  <button class="btn"><a href=".//#films">Посмотреть каталог фильмов</a></button>
+                  <button class="btn"><a href=".//main#films">Посмотреть каталог фильмов</a></button>
               </div>
           </div>
         </div>

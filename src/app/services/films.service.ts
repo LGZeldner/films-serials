@@ -21,5 +21,17 @@ export class FilmsService extends API {
 
     return this.get(`${this.url}/${id}`).toPromise();
   }
+  putById(id: number, data){ //
 
+    return this.put(`${this.url}/${id}`, data).toPromise();
+  }
+
+  deleteById(id: number) {
+
+    return this.delete(`${this.url}/${id}`).toPromise();
+  }
+
+  postFilms(data) {
+    return this.post(this.url, data).toPromise();
+  }
 }

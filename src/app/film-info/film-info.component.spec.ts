@@ -13,7 +13,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { FilmsService } from '../services/films.service';
 
-describe('CakeInfoComponent', () => {
+describe('FilmInfoComponent', () => {
   let component: FilmInfoComponent;
   let fixture: ComponentFixture<FilmInfoComponent>;
 

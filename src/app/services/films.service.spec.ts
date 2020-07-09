@@ -46,16 +46,16 @@ httpTestingController.verify();
 
 
     it('should retrieve film by ID', () => {
-      const dummyCake:FilmModule[] = [
+      const dummyFilm:FilmModule[] = [
         {id:1, name:"Тор", picture:"/assets/img/film1.jpg", info:"Информация о фильме", price:"400 руб."}
       ];
       const id = 1;
       filmsService.getById(id).then(film =>{
-        expect(film).toEqual(dummyCake);
+        expect(film).toEqual(dummyFilm);
       });
       const request = httpTestingController.expectOne(`http://localhost:3000/${filmsService.url}/${id}`);
       expect(request.request.method).toBe('GET');
-      request.flush(dummyCake);
+      request.flush(dummyFilm);
     });
 
 });

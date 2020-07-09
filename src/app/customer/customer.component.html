@@ -1,1 +1,29 @@
-<p>customer works!</p>
+<div class="container">
+  <div class = " mt-5"><app-worker-header></app-worker-header></div>
+  <table class="table" *ngFor="let customer of customers">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">Имя заказчика</th>
+      <th scope="col">Телефон</th>
+      <th scope="col">Email</th>
+      <th scope="col">Фильм</th>
+      <th scope="col">Цена фильма</th>
+      <th scope="col">Адрес</th>
+      <th scope="col">Дата</th>
+      <th scope="col">Статус</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{customer.name_customer}}</td>
+      <td>{{customer.tel}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.film_name}}</td>
+      <td>{{customer.film_price}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.date}}</td>
+      <td>{{customer.status}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

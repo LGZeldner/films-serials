@@ -13,7 +13,7 @@
         <h2><a name="films" >Фильмы</a></h2>
             <div class="row filmsphoto" >
                 <div class="col" *ngFor = "let film of films.slice(0,3)">
-                    <a [routerLink]="['film-info', film.id]"  title="Посмотреть подробную информацию" class="photo">
+                    <a [routerLink]="['/film-info', film.id]"  title="Посмотреть подробную информацию" class="photo">
                         <div class="mt-5">
                              <img src="{{film.picture}}" alt="Фильм" class="w-100">
                         </div>
@@ -29,7 +29,7 @@
             </div>
             <ng-container *ngIf="next">
             <div class="col" *ngFor = "let film of films.slice(3)">
-                <a [routerLink]="['film-info', film.id]" class="photo" title="Посмотреть подробную информацию">
+                <a [routerLink]="['/film-info', film.id]" class="photo" title="Посмотреть подробную информацию">
                     <div class="mt-5">
                     <img src="{{film.picture}}" alt="Фильм" class="w-100">
                     </div>
@@ -67,3 +67,4 @@
         </div>
         </div>
 </main>
+<app-footer></app-footer>

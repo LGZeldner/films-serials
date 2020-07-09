@@ -7,12 +7,12 @@ import { Observable, from } from 'rxjs';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-form-ready',
-  templateUrl: './form-ready.component.html',
-  styleUrls: ['./form-ready.component.css']
+  selector: 'app-order',
+  templateUrl: './order.component.html',
+  styleUrls: ['./order.component.css']
 })
-export class FormReadyComponent implements OnInit {
-  formReady: FormGroup;
+export class OrderComponent implements OnInit {
+  formOrder: FormGroup;
   film;
   id:number;
   disabled = false;
@@ -29,7 +29,7 @@ export class FormReadyComponent implements OnInit {
 
   async ngOnInit() {
     this.film = await this.filmsService.getById(this.id);          /** Получаем фильм по id*/
-    this.formReady = new FormGroup({                              /**создание новой формы для заказа фильмов из списка готовых */
+    this.formOrder = new FormGroup({                              /**создание новой формы для заказа фильмов из списка готовых */
     film_name: new FormControl( { value: this.film.name, disabled: this.disabled }),
     film_price: new FormControl( { value: this.film.price, disabled: this.disabled }),
     name_customer: new FormControl( { value: '', disabled: this.disabled } , [Validators.required]),
@@ -40,9 +40,9 @@ export class FormReadyComponent implements OnInit {
     });
     }
 onSubmit(){
-  this.db.list('customers').push( this.formReady.value);                           /** Заносим данные с формы в БД */
+  this.db.list('customers').push( this.formOrder.value);                           /** Заносим данные с формы в БД */
   alert('Ваш заказ успешно отправлен! Наш администратор скоро с Вами свяжется!');  /** Выводим сообщение об успешной отправке формы*/
-  this.router.navigate(['/']);                                                     /** Перенаправляемся на главную страницу*/
+  this.router.navigate(['/main']);                                                     /** Перенаправляемся на главную страницу*/
   }
   public mask = [8,'(', /[0-9]/, /[0-9]/, /[0-9]/, ')', ' ', /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/]; /** Маска для корректного ввода телефона */
 }

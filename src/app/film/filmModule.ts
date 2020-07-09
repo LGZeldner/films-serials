@@ -9,3 +9,15 @@ export interface FilmModule { /** Интерфейс, отображающий �
      info: string;
      price: string
 }
+
+export interface customers {
+
+  id?:number;
+  address:string;
+  film_name:string;
+  film_price:string;
+  date:string;
+  email:string;
+  name_customer:string;
+  tel:string;
+}

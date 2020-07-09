@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
-import { FormReadyComponent } from './order/form-ready.component';
+import { OrderComponent } from './order/order.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule, FormsModule, FormBuilder} from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
@@ -20,6 +20,8 @@ import { AdminConfigComponent } from './admin-config/admin-config.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { WorkerComponent } from './worker/worker.component';
 import { CustomerComponent } from './customer/customer.component';
+import { LoginComponent } from './login/login.component';
+import { LoginWorkerComponent } from './login-worker/login-worker.component';
 
 
 
@@ -29,13 +31,15 @@ import { CustomerComponent } from './customer/customer.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    FormReadyComponent,
+    OrderComponent,
     FilmInfoComponent,
     AdminComponent,
     AdminConfigComponent,
     LoginAdminComponent,
     WorkerComponent,
-    CustomerComponent
+    CustomerComponent,
+    LoginComponent,
+    LoginWorkerComponent
 
   ],
   imports: [

@@ -1,1 +1,41 @@
-<p>admin-config works!</p>
+<div class="container" >
+  <h2 class="text-center m-3">Добавить фильм или сериал</h2>
+
+  <form  [formGroup]="formAdd" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Название фильма или сериала:</label>
+      <input type="text" name="name" id="name" class="form-control" formControlName="name" >
+      <label for="picture">Ссылка на картинку:</label>
+      <input type="text" name="picture" id="picture" class="form-control" formControlName="picture" >
+      <label for="info">Информация о фильме или сериале:</label>
+      <textarea name="info" id="info" cols="30" rows="2" formControlName="info" class="form-control" ></textarea>
+      <label for="price">Цена фильма или сериала:</label>
+      <input type="text" name="price" id="price" class="form-control" formControlName="price" >
+      <button class="btn btn-info mt-3" [disabled]="formAdd.invalid" type="submit" >Добавить</button>
+    </div>
+
+  </form>
+
+
+  <h2 class="text-center m-3">Список фильм или сериалов</h2>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">№</th>
+      <th scope="col">Название фильм или сериала</th>
+      <th scope="col">Картинка</th>
+      <th scope="col">Информация о фильм или сериале</th>
+      <th scope="col">Цена фильм или сериала</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let film of films">
+    <tr>
+      <td>{{film.id}}</td>
+      <td>{{film.name}}</td>
+      <td>{{film.picture}}</td>
+      <td>{{film.info}}</td>
+      <td>{{film.price}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
