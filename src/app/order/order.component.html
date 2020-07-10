@@ -10,20 +10,20 @@
         <div class="form-group">
             <label for="name_customer">Имя:<sup>*</sup></label>
 
-            <input type="text" class="form-control mb-3" name="name_customer"  formControlName="name_customer">
+            <input type="text" id="name_customer"class="form-control mb-3" name="name_customer"  formControlName="name_customer">
             <label for="address">Адрес:<sup>*</sup></label>
-            <input type="text" class="form-control mb-3" name="address"  formControlName="address">
+            <input type="text" id="address" class="form-control mb-3" name="address"  formControlName="address">
             <label for="tel" >Телефон:<sup>*</sup></label>
-            <input type="text" class="form-control mb-3" name="tel" formControlName="tel" mask="0(000)-000-00-00" [showMaskTyped]="true">
+            <input type="text" id="tel" class="form-control mb-3" name="tel" formControlName="tel" mask="0(000)-000-00-00" [showMaskTyped]="true">
             <label for="email">Email:<sup>*</sup></label>
-            <input type="text" name="email" class="form-control mb-3"  formControlName="email">
+            <input type="text" name="email" id="email" class="form-control mb-3"  formControlName="email">
             <div *ngIf="formOrder.get('email').invalid && formOrder.get('email').touched" class="alert alert-danger">
           Некорректный email
         </div>
 
 
             <label for="date">Когда вам нужен фильм?<sup>*</sup></label>
-            <input type="date" name="date"class="form-control mb-3"  formControlName="date" >
+            <input type="date" name="date" id="date" class="form-control mb-3"  formControlName="date" >
           <!--<input type="text" name="text" class="form-control mb-3"  formControlName="status" hidden>
           -->
           <p><sup>*</sup> - Необходимые поля для заполнения</p>
