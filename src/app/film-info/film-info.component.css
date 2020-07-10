@@ -3,9 +3,9 @@
     background-size:cover;
 }
 .info .order {
-    border: 3px solid #770a00;
+    border: 1px solid black;
     padding: 5px 20px;
-    color: solid #770a00;
+    color:  black;
     font-size: 20px;
 }
 .info button:hover{

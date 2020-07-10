@@ -14,7 +14,7 @@ header .text-center a{
 header {
     height: 180px;
     background-color: #fcfcf0;
-    color: #770a00;
+    color: black;
 }
 header .header {
     display: grid;
@@ -41,7 +41,7 @@ header .contact {
     font-size: 20px;
 }
 header .contact button {
-    border: 3px solid #770a00;
+    border: 1px solid black;
     padding: 5px 20px;
 }
 header .contact .tel {

@@ -68,7 +68,7 @@ main .filmsphoto{
         font-size: 20px;
     }
     main .afterPhoto .takeLink {
-    border: 3px solid #770a00;
+    border: 1px solid black;
     padding: 5px 20px;
     width: 30%;
     }
